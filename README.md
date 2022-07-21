@@ -1,1 +1,1 @@
-# Sistema Recomendador para Planes de Formación y Objetivos de Desarrollo Empresarial
+# Sistema recomendador para planes de formación y objetivos de desarrollo empresarial
