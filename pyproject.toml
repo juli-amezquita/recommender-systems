@@ -5,6 +5,9 @@ description = "training recommender for employees"
 authors = [
     {name = "juli-amezquita",email = "juli.amezquita@gmail.com"}
 ]
+packages = [
+    { include = "training_recommender", from = "src" }
+]
 license = {text = "MIT"}
 readme = "README.md"
 requires-python = ">=3.12"
