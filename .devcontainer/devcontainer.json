@@ -2,7 +2,7 @@
   "name": "Recommender System Dev",
   "image": "mcr.microsoft.com/devcontainers/python:3.10",
   "features": {
-    "ghcr.io/devcontainers/features/poetry:1": {}
+    "ghcr.io/devcontainers-contrib/features/poetry:latest": {}
   },
   "postCreateCommand": "poetry install",
   "customizations": {
