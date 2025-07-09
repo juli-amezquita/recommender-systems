@@ -2,16 +2,13 @@
 
 Este proyecto es parte del trabajo de tesis de la Maestría en *Visual Analytics and Big Data* de la Universidad Internacional de La Rioja (UNIR). Su propósito es diseñar un **sistema de recomendación de planes de formación**, corporativos y personales, que apoye a las Direcciones de Talento Humano en la identificación de programas de capacitación personalizados para cada empleado.
 
-> 📍 Puedes explorar el modelo recomendador inicial en este notebook:  
-> [Modelo_Sistema_Recomendador_F.ipynb](https://nbviewer.org/github/juli-amezquita/recommender-systems/blob/main/Modelo_Sistema_Recomendador_F.ipynb#topic=15&lambda=1&term=>)
+📍 Puedes explorar el modelo recomendador inicial en este notebook:
+[Modelo_Sistema_Recomendador_F.ipynb](https://nbviewer.org/github/juli-amezquita/recommender-systems/blob/main/Modelo_Sistema_Recomendador_F.ipynb#topic=15&lambda=1&term=>)
 
----
 
 # 🧠 HR Course Recommender
 
 Sistema de recomendación de cursos personalizados para empleados, diseñado para apoyar la creación de planes de formación y desarrollo dentro de áreas de Recursos Humanos.
-
----
 
 ## 🎯 Propósito
 
@@ -22,8 +19,6 @@ Este proyecto permite recomendar cursos relevantes de plataformas como Udemy (y 
 - Habilidades por cargo
 - Habilidades estratégicas de la compañía
 
----
-
 ## ⚙️ Tecnologías utilizadas
 
 - Python 3.10+
@@ -32,8 +27,6 @@ Este proyecto permite recomendar cursos relevantes de plataformas como Udemy (y 
 - Modelos de recomendación semántica
 - Arquitectura de proyecto modular (`src/`)
 - GitHub Codespaces (opcional para desarrollo en la nube)
-
----
 
 ## 🧱 Estructura del proyecto
 
@@ -72,9 +65,6 @@ recommender-systems/
 └── README.md                    # Documentación general
 ```
 
-
----
-
 ## 🚀 Cómo usar
 
 1. Clona el repositorio:
@@ -100,31 +90,23 @@ Este archivo está excluido del repo por .gitignore.
 4. Ejecuta las recomendaciones:
 
 
-
----
-
-📡 Estado actual
+## 📡 Estado actual
 ✅ Motor semántico con sentence-transformers
 ✅ Recomendaciones personalizadas por empleado
 ✅ Estructura modular compatible con producción
 🚧 Integración con Coursera/edX APIs (pendiente)
 🚧 Visualización interactiva (posible Streamlit o Power BI)
 
----
-
-🔒 Privacidad y protección de datos
+## 🔒 Privacidad y protección de datos
 El archivo de empleados es de creación original, confidencial, y está protegido por .gitignore. No se sube a GitHub.
 Para trabajar en Codespaces u otro entorno cloud, debe cargarse manualmente.
 
----
-🧠 Autora
+## 🧠 Autora
 Juliana Amezquita
 Gerente de Reclutamiento | Consultora en People Analytics y HR Tech
 Especializada en soluciones basadas en datos para RRHH
 📍 Colombia
 🔗 [LinkedIn](https://www.linkedin.com/in/juliana-amezquita/)
 
----
-
-📃 Licencia
+## 📃 Licencia
 MIT License — Este repositorio es de código abierto, pero no incluye datos personales o sensibles.
