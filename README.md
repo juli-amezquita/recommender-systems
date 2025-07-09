@@ -88,6 +88,12 @@ data/private/1_employee_dataset_new.csv
 4. Ejecutar las recomendaciones:
 
 
+## 📡 Estado actual
+* ✅ Motores de recomendación (TF-IDF, LDA, embeddings)
+* ✅ Recomendaciones personalizadas por empleado
+* ✅ Estructura modular compatible con producción
+* 🚧 Integración con Coursera/edX APIs (pendiente)
+* 🚧 Visualización interactiva (posible Streamlit o Power BI)
 
 ## 📄 Documentación académica
 Los siguientes documentos corresponden a la tesis y presentación final del proyecto:
@@ -96,13 +102,6 @@ Los siguientes documentos corresponden a la tesis y presentación final del proy
 
 Licencia: Creative Commons BY-NC 4.0
 (Permite compartir y adaptar, siempre que no sea con fines comerciales)
-
-## 📡 Estado actual
-* ✅ Motores de recomendación (TF-IDF, LDA, embeddings)
-* ✅ Recomendaciones personalizadas por empleado
-* ✅ Estructura modular compatible con producción
-* 🚧 Integración con Coursera/edX APIs (pendiente)
-* 🚧 Visualización interactiva (posible Streamlit o Power BI)
 
 ## 🔐 Licencia
 El código está licenciado bajo Apache 2.0, lo que permite su uso libre siempre que se incluya la atribución correspondiente.
