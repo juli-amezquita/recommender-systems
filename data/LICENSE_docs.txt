@@ -1,0 +1,14 @@
+### 📄 Documentación y tesis
+
+Los archivos dentro de la carpeta `docs/` (incluyendo la tesis y presentaciones en PDF) están licenciados bajo:
+
+[![CC BY-NC 4.0](https://licensebuttons.net/l/by-nc/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc/4.0/)
+
+**Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)**
+
+Esto significa que puedes compartir y adaptar estos documentos siempre y cuando:
+
+- Se dé el crédito apropiado a la autora.
+- No se usen con fines comerciales.
+
+> © 2025 Juliana Andrea Amezquita Abello
