@@ -80,7 +80,7 @@ cd recommender-systems
 poetry install
 ````
 
-3. Asegúrate de subir manualmente tu archivo privado:
+3. Asegúrate de subir manualmente el archivo privado:
 
 ```bash
 data/private/1_employee_dataset_new.csv
@@ -108,5 +108,8 @@ Especializada en soluciones basadas en datos para RRHH
 📍 Colombia
 🔗 [LinkedIn](https://www.linkedin.com/in/juliana-amezquita/)
 
-## 📃 Licencia
-MIT License — Este repositorio es de código abierto, pero no incluye datos personales o sensibles.
+## 🛡️ Licencia
+
+* Este proyecto de software se publica bajo la **Licencia Apache 2.0**. Esto permite su uso libre, modificación y distribución con fines personales o comerciales, siempre que se incluya la atribución correspondiente.
+
+* Los documentos contenidos en la carpeta `docs/` (incluyendo la tesis y presentaciones académicas) están licenciados bajo **Creative Commons BY-NC 4.0**, lo que prohíbe su uso con fines comerciales sin autorización previa.
