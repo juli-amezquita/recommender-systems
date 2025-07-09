@@ -7,15 +7,15 @@ sys.path.append(os.path.abspath("src"))
 from setup_path import add_src_to_path
 add_src_to_path()
 
-from recommender.engine.semantic_engine import SemanticRecommender
-from recommender.recommendation import generate_recommendations_for_employees
+from training_recommender.engine.semantic_engine import SemanticRecommender
+from training_recommender.recommendation import generate_recommendations_for_employees
 import pandas as pd
 import numpy as np
 import os
 
 # ⚙️ Configuración
 COURSE_PATH = "data/processed/2_en_courses_9categories.csv"
-EMPLOYEE_PATH = "data/processed/1_employee_dataset_new.csv"
+EMPLOYEE_PATH = ".secrets/1_employee_dataset_new.csv"
 OUTPUT_DIR = "outputs/batches"
 BATCH_SIZE = 500
 MODEL_NAME = "all-MiniLM-L6-v2"

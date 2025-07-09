@@ -1,10 +1,10 @@
-from recommender.engine.semantic_engine import SemanticRecommender
-from recommender.recommendation import generate_recommendations_for_employees
+from training_recommender.engine.semantic_engine import SemanticRecommender
+from training_recommender.recommendation import generate_recommendations_for_employees
 import pandas as pd
 
 # Cargar los datos
 df_courses = pd.read_csv("data/processed/2_en_courses_9categories.csv")
-df_employees = pd.read_csv("data/processed/1_employee_dataset_new.csv")
+df_employees = pd.read_csv(".secrets/1_employee_dataset_new.csv")
 
 # Instanciar y entrenar el motor semántico
 recommender = SemanticRecommender()

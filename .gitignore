@@ -38,6 +38,7 @@ venv.bak/
 # Carpetas del proyecto
 clean_datasets/
 data/processed/1_employee_dataset_new.csv
+.secrets/
 
 # Jupyter Notebook
 # gitignore template for Jupyter Notebooks

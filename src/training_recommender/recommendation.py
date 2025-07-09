@@ -9,7 +9,7 @@ Este módulo extrae habilidades de un DataFrame de empleados y genera recomendac
 
 import pandas as pd
 from typing import List
-from recommender.engine.semantic_engine import SemanticRecommender
+from training_recommender.engine.semantic_engine import SemanticRecommender
 
 
 def extract_skills_from_employee(row: pd.Series, skill_columns: List[str]) -> List[str]:
