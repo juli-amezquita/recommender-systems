@@ -1,56 +1,44 @@
-# 🧠 Sistema Recomendador para Planes de Formación y Objetivos de Desarrollo Empresarial
+# 🧠 Sistema Recomendador de Cursos para Planes de Formación en Empresas
 
-Este proyecto es parte del trabajo de tesis de la Maestría en *Visual Analytics and Big Data* de la Universidad Internacional de La Rioja (UNIR). Su propósito es diseñar un **sistema de recomendación de planes de formación**, corporativos y personales, que apoye a las Direcciones de Talento Humano en la identificación de programas de capacitación personalizados para cada empleado.
+> Proyecto de tesis de maestría en Visual Analytics and Big Data
+Universidad Internacional de La Rioja (UNIR)
 
-📍 Puedes explorar el modelo recomendador inicial en este notebook:
-[Modelo_Sistema_Recomendador_F.ipynb](https://nbviewer.org/github/juli-amezquita/recommender-systems/blob/main/Modelo_Sistema_Recomendador_F.ipynb#topic=15&lambda=1&term=>)
+## 📝 Descripción general
+Este proyecto implementa un sistema de recomendación de cursos personalizados para empleados de una empresa, basado en información realista sobre sus posiciones, habilidades requeridas, desempeño, plan de sucesión, y estrategia corporativa. Utiliza técnicas modernas de análisis semántico con embeddings, NLP, modelado temático (LDA), y modelos basados en TF-IDF, todo desarrollado en Python con una arquitectura modular, reproducible y escalable.
 
 
-# 🧠 HR Course Recommender
+## 🔍 Objetivo
+El objetivo es ayudar a los equipos de Talento Humano a construir planes de desarrollo personalizados a través de recomendaciones formativas relevantes, alineadas con la estrategia del negocio.
 
-Sistema de recomendación de cursos personalizados para empleados, diseñado para apoyar la creación de planes de formación y desarrollo dentro de áreas de Recursos Humanos.
 
-## 🎯 Propósito
+## 📌 ¿Por qué este proyecto es relevante?
+* Integra datos organizacionales reales en el diseño de algoritmos de recomendación.
+* Enfocado en Recursos Humanos y desarrollo de talento, un área aún poco explorada con sistemas recomendadores personalizados.
+* Útil para áreas de People Analytics, HR Tech, L&D y Talent Management.
 
-Este proyecto permite recomendar cursos relevantes de plataformas como Udemy (y próximamente Coursera/edX) para cada empleado de una compañía, utilizando:
-
-- Evaluación de desempeño
-- Planes de sucesión
-- Habilidades por cargo
-- Habilidades estratégicas de la compañía
-
-## ⚙️ Tecnologías utilizadas
-
-- Python 3.10+
-- Poetry
-- NLP con `sentence-transformers`
-- Modelos de recomendación semántica
-- Arquitectura de proyecto modular (`src/`)
-- GitHub Codespaces (opcional para desarrollo en la nube)
-
-## 🧱 Estructura del proyecto
+## 🗂️ Estructura del proyecto
 
 ```bash
 recommender-systems/
 │
 ├── data/                         # Datos de entrada
-│   ├── processed/                # Datos limpios o transformados listos para análisis
+│   ├── processed/                # CSV procesados para uso del modelo
 │   │   ├── 1_employee_dataset_new.csv        # Dataset de empleados (privado)
-│   │   └── 2_en_courses_9categories.csv      # Dataset de cursos de Udemy
+│   │   └── 2_en_courses_9categories.csv      # Dataset de cursos de Udemy (público)
 │   └── raw/                      # Datos sin procesar
 │       └── datasets_udemy/      # Otros archivos originales de cursos
 │
-├── docs/                         # Documentos académicos y presentaciones
+├── docs/                         # Documentos académicos y presentaciones  # Licencia CC-BY-NC 4.0
 │   ├── 0_ppt_Sistema_Recomendador_TFM.pdf
-│   └── 0_TFM_Juliana_Andrea_Amezquita_Andrade.pdf
+│   └── 0_TFM_Juliana_Andrea_Amezquita_Abello.pdf
 │
-├── notebooks/                   # Notebooks de análisis y pruebas
+├── notebooks/                   # Exploraciones y prototipos en Jupyter
 │   ├── Análisis_Exploratorio_dataset_cursos.ipynb
 │   ├── Análisis_Exploratorio_Dataset_Empleados_F.ipynb
 │   └── Modelo_Sistema_Recomendador_F_v2022.ipynb
 │
 ├── scripts/                     # Scripts ejecutables
-├── src/                         # Código fuente modular del proyecto
+├── src/                         # Código fuente del motor recomendador
 │   └── recommender/
 │       ├── data/                # Futuro: carga o procesamiento de datos
 │       ├── engine/              # Motores de recomendación (TF-IDF, LDA, embeddings)
@@ -59,22 +47,32 @@ recommender-systems/
 │       └── __init__.py
 │
 ├── .gitignore                   # Archivos excluidos del control de versiones
-├── LICENSE                      # Licencia del proyecto
-├── poetry.lock                  # Versiones exactas de dependencias
+├── LICENSE                      # Apache 2.0
+├── poetry.lock                  # Lockfile de dependencias
 ├── pyproject.toml               # Configuración del proyecto con Poetry
-└── README.md                    # Documentación general
+└── README.md                    # Este archivo
 ```
 
-## 🚀 Cómo usar
+## 🧪 Tecnologías y librerías utilizadas
+* Python 3.10
+* Poetry para gestión de entorno y dependencias
+* sentence-transformers para embeddings semánticos
+* scikit-learn, pandas, numpy, matplotlib, seaborn
+* gensim para modelado LDA
+* NLTK, spaCy, re para NLP clásico
+* Power BI y Streamlit para posibles visualizaciones
+* JupyterLab para exploración y prototipado
 
-1. Clona el repositorio:
+## ⚙️ ¿Cómo ejecutar el proyecto?
+
+1. Clonar el repositorio:
 
 ```bash
 git clone https://github.com/juli-amezquita/recommender-systems.git
 cd recommender-systems
 ```
 
-2. Instala las dependencias:
+2. Instalar las dependencias:
 
 ```bash
 poetry install
@@ -85,31 +83,34 @@ poetry install
 ```bash
 data/private/1_employee_dataset_new.csv
 ````
-Este archivo está excluido del repo por .gitignore.
+> ⚠️ Nota: recuerda que debes colocar el archivo 1_employee_dataset_new.csv dentro de data/processed/ (este archivo está excluido por .gitignore y no es público).
 
-4. Ejecuta las recomendaciones:
+4. Ejecutar las recomendaciones:
 
+
+
+## 📄 Documentación académica
+Los siguientes documentos corresponden a la tesis y presentación final del proyecto:
+* `docs/0_TFM_Juliana_Andrea_Amezquita_Abello.pdf`
+* `docs/0_ppt_Sistema_Recomendador_TFM.pdf`
+
+Licencia: Creative Commons BY-NC 4.0
+(Permite compartir y adaptar, siempre que no sea con fines comerciales)
 
 ## 📡 Estado actual
-✅ Motor semántico con sentence-transformers
-✅ Recomendaciones personalizadas por empleado
-✅ Estructura modular compatible con producción
-🚧 Integración con Coursera/edX APIs (pendiente)
-🚧 Visualización interactiva (posible Streamlit o Power BI)
+* ✅ Motores de recomendación (TF-IDF, LDA, embeddings)
+* ✅ Recomendaciones personalizadas por empleado
+* ✅ Estructura modular compatible con producción
+* 🚧 Integración con Coursera/edX APIs (pendiente)
+* 🚧 Visualización interactiva (posible Streamlit o Power BI)
 
-## 🔒 Privacidad y protección de datos
-El archivo de empleados es de creación original, confidencial, y está protegido por .gitignore. No se sube a GitHub.
-Para trabajar en Codespaces u otro entorno cloud, debe cargarse manualmente.
+## 🔐 Licencia
+El código está licenciado bajo Apache 2.0, lo que permite su uso libre siempre que se incluya la atribución correspondiente.
+Los documentos contenidos en la carpeta `docs/` (incluyendo la tesis y presentaciones) están licenciados bajo **Creative Commons BY-NC 4.0**, lo que prohíbe su uso con fines comerciales sin autorización previa.
 
-## 🧠 Autora
-Juliana Amezquita
-Gerente de Reclutamiento | Consultora en People Analytics y HR Tech
-Especializada en soluciones basadas en datos para RRHH
-📍 Colombia
+## 👩🏼‍🦱 Autora
+Juliana Amézquita Abello\
+Gerente de Reclutamiento | Consultora en People Analytics y HR Tech\
+Especializada en soluciones basadas en datos para RRHH\
+📍 Colombia\
 🔗 [LinkedIn](https://www.linkedin.com/in/juliana-amezquita/)
-
-## 🛡️ Licencia
-
-* Este proyecto de software se publica bajo la **Licencia Apache 2.0**. Esto permite su uso libre, modificación y distribución con fines personales o comerciales, siempre que se incluya la atribución correspondiente.
-
-* Los documentos contenidos en la carpeta `docs/` (incluyendo la tesis y presentaciones académicas) están licenciados bajo **Creative Commons BY-NC 4.0**, lo que prohíbe su uso con fines comerciales sin autorización previa.
