@@ -13,14 +13,14 @@ import pandas as pd
 import numpy as np
 import os
 
-# ⚙️ Configuración
+# Configuración
 COURSE_PATH = "data/processed/2_en_courses_9categories.csv"
 EMPLOYEE_PATH = ".secrets/1_employee_dataset_new.csv"
 OUTPUT_DIR = "outputs/batches"
 BATCH_SIZE = 500
 MODEL_NAME = "all-MiniLM-L6-v2"
 
-# 🧠 Columnas de habilidades a evaluar
+# Columnas de habilidades a evaluar
 skill_columns = [
     "succession_plan_skill_1", "succession_plan_skill_2", "succession_plan_skill_3",
     "performance_measure_skill_1", "performance_measure_skill_2", "performance_measure_skill_3",
@@ -28,15 +28,23 @@ skill_columns = [
     "corporate_skill_1", "corporate_skill_2"
 ]
 
-# 📦 Cargar datos
+# Cargar datos
 df_courses = pd.read_csv(COURSE_PATH)
 df_employees = pd.read_csv(EMPLOYEE_PATH)
 
-# 🧠 Instanciar recomendador semántico
+# Instanciar recomendador semántico
 recommender = SemanticRecommender(model_name=MODEL_NAME)
 
-# ✅ Precalcular embeddings y cargarlos
+# Precalcular embeddings y cargarlos
 course_embeddings_path = "outputs/course_embeddings.npy"
+
+# Asegurarse de que la carpeta 'outputs' exista
+# Extraer el directorio del path del archivo
+output_dir_for_embeddings = os.path.dirname(course_embeddings_path)
+if output_dir_for_embeddings and not os.path.exists(output_dir_for_embeddings):
+    os.makedirs(output_dir_for_embeddings)
+    print(f"Directorio creado: {output_dir_for_embeddings}")
+
 if os.path.exists(course_embeddings_path):
     print("Cargando embeddings precalculados...")
     recommender.course_embeddings = np.load(course_embeddings_path)
@@ -46,7 +54,7 @@ else:
     recommender.fit(df_courses, text_column="Summary")
     np.save(course_embeddings_path, recommender.course_embeddings)
 
-# 🧪 Dividir en lotes y procesar
+# Dividir en lotes y procesar
 if not os.path.exists(OUTPUT_DIR):
     os.makedirs(OUTPUT_DIR)
 
@@ -67,10 +75,10 @@ for i in range(n_batches):
     print(f"🔄 Procesando lote {i+1}/{n_batches}...")
 
     df_result = generate_recommendations_for_employees(
-        df_batch, recommender, skill_columns, top_k=3
+        df_batch, recommender, skill_columns, top_k_per_skill=3 
     )
 
     df_result.to_csv(output_path, index=False)
     print(f"✅ Guardado: {output_path}")
 
-print("\n🎉 Todos los lotes han sido procesados.")
+print("\n Todos los lotes han sido procesados.")
